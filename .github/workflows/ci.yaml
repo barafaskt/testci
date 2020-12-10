@@ -1,5 +1,9 @@
 name: ci-golang-workflow
-on: [push]
+#https://docs.github.com/pt/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+on: 
+  pull_request: 
+    branches:
+      - develop
 jobs:
   ckeck-application:
     runs-on: ubuntu-latest
